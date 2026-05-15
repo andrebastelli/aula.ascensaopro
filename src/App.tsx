@@ -123,33 +123,41 @@ export default function App() {
         </div>
       </section>
 
-      {/* VIDEO */}
-      <section id="aula" className="px-4 md:px-6 pb-16 md:pb-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="relative animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <div className="absolute -inset-4 bg-gradient-to-r from-gold/30 via-gold-light/20 to-gold/30 rounded-3xl blur-2xl opacity-60" />
-            <div className="relative gold-border rounded-2xl overflow-hidden shadow-glow bg-black">
-              <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-                <iframe
-                  src={VIDEO_URL}
-                  className="absolute inset-0 w-full h-full"
-                  style={{ border: "none" }}
-                  allow="autoplay; encrypted-media; fullscreen"
-                  allowFullScreen
-                  title="Aula Ascensão Pro"
-                />
-              </div>
-            </div>
-          </div>
+      <section id="aula" className="px-3 md:px-6 pb-12 md:pb-20">
+  <div className="max-w-5xl mx-auto">
 
-          <div className="mt-10 md:mt-12 text-center animate-fade-up" style={{ animationDelay: "0.45s" }}>
-            <CTAButton>
-  <span className="md:hidden">Quero crescer</span>
-  <span className="hidden md:inline">Quero destravar meu crescimento</span>
-</CTAButton>
-          </div>
+    <div className="relative">
+
+      {/* EFEITO (mais leve no mobile) */}
+      <div className="hidden md:block absolute -inset-4 bg-gradient-to-r from-gold/30 via-gold-light/20 to-gold/30 rounded-3xl blur-2xl opacity-60" />
+
+      {/* CARD VIDEO */}
+      <div className="relative gold-border rounded-xl md:rounded-2xl overflow-hidden shadow-md md:shadow-glow bg-black">
+
+        <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+          <iframe
+            src={VIDEO_URL}
+            className="absolute inset-0 w-full h-full"
+            style={{ border: "none" }}
+            allow="autoplay; encrypted-media; fullscreen"
+            allowFullScreen
+            title="Aula Ascensão Pro"
+          />
         </div>
-      </section>
+
+      </div>
+    </div>
+
+    {/* CTA */}
+    <div className="mt-8 md:mt-12 text-center">
+      <CTAButton>
+        <span className="md:hidden">Quero crescer</span>
+        <span className="hidden md:inline">Quero destravar meu crescimento</span>
+      </CTAButton>
+    </div>
+
+  </div>
+</section>
 
       {/* STATS */}
       <section className="px-6 py-16 md:py-24">
