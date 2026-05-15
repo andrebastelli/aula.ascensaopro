@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const CHECKOUT_URL = "https://chk.eduzz.com/801E4VKNW7";
 const VIDEO_URL = 
-  "https://www.kapwing.com/w/UaYjDAQloZ";
+  "https://youtu.be/TuRcOmk8ZRs";
 
 function CTAButton({ children, large = false }: { children: React.ReactNode; large?: boolean }) {
   return (
