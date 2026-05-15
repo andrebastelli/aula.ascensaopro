@@ -207,7 +207,7 @@ export default function App() {
         </p>
 
         <div className="mt-6 md:mt-10">
-          <CTAButton>Quero destravar meu crescimento</CTAButton>
+          <CTAButton large>Quero destravar meu crescimento</CTAButton>
         </div>
 
       </div>
