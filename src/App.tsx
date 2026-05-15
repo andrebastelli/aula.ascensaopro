@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 
-const CHECKOUT_URL =
-  import.meta.env.VITE_CHECKOUT_URL || "https://chk.eduzz.com/801E4VKNW7";
-const VIDEO_URL =
-  import.meta.env.VITE_VIDEO_URL ||
+const CHECKOUT_URL = "https://chk.eduzz.com/801E4VKNW7";
+const VIDEO_URL = 
   "https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/preview";
 
 function CTAButton({ children, large = false }: { children: React.ReactNode; large?: boolean }) {
