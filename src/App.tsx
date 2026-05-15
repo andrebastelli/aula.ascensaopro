@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const CHECKOUT_URL = "https://chk.eduzz.com/801E4VKNW7";
-const VIDEO_URL =
+const VIDEO_URL = 
   "https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/preview";
 
 function CTAButton({ children, large = false }: { children: React.ReactNode; large?: boolean }) {
@@ -10,8 +10,9 @@ function CTAButton({ children, large = false }: { children: React.ReactNode; lar
       href={CHECKOUT_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className={`btn-premium inline-flex items-center justify-center gap-3 rounded-full font-semibold text-ink tracking-wide uppercase ${large ? "px-10 py-5 text-base md:text-lg" : "px-8 py-4 text-sm md:text-base"
-        }`}
+      className={`btn-premium inline-flex items-center justify-center gap-3 rounded-full font-semibold text-ink tracking-wide uppercase ${
+        large ? "px-10 py-5 text-base md:text-lg" : "px-8 py-4 text-sm md:text-base"
+      }`}
     >
       {children}
       <svg
@@ -69,17 +70,18 @@ export default function App() {
     <div className="min-h-screen overflow-x-hidden">
       {/* NAV */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-ink/80 backdrop-blur-xl border-b border-white/5 py-3" : "py-6"
-          }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          scrolled ? "bg-ink/80 backdrop-blur-xl border-b border-white/5 py-3" : "py-6"
+        }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center justify-center">
-            <img
-              src="/ascensao-logo.png"
-              alt="Ascensão Pro"
-              className="h-8 md:h-10 w-auto invert brightness-0"
-            />
-          </div>
+  <img
+    src="/ascensao-logo.png"
+    alt="Ascensão Pro"
+    className="h-8 md:h-10 w-auto invert brightness-0"
+  />
+</div>
           <a
             href={CHECKOUT_URL}
             target="_blank"
