@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 
-const CHECKOUT_URL =
-  import.meta.env.VITE_CHECKOUT_URL || "https://chk.eduzz.com/801E4VKNW7";
-const VIDEO_URL =
-  import.meta.env.VITE_VIDEO_URL ||
-  "https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/preview";
+const CHECKOUT_URL = "https://chk.eduzz.com/801E4VKNW7";
+const VIDEO_URL = "https://www.youtube.com/embed/TuRcOmk8ZRs?controls=1&modestbranding=1&rel=0&showinfo=0";
 
 function CTAButton({ children, large = false }: { children: React.ReactNode; large?: boolean }) {
   return (
@@ -12,9 +9,11 @@ function CTAButton({ children, large = false }: { children: React.ReactNode; lar
       href={CHECKOUT_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className={`btn-premium inline-flex items-center justify-center gap-3 rounded-full font-semibold text-ink tracking-wide uppercase ${
-        large ? "px-10 py-5 text-base md:text-lg" : "px-8 py-4 text-sm md:text-base"
-      }`}
+      className={`btn-premium inline-flex items-center justify-center gap-2 rounded-full font-semibold text-ink tracking-wide uppercase whitespace-nowrap md:whitespace-normal w-full max-w-[280px] mx-auto md:w-auto md:max-w-none ${
+  large
+    ? "px-6 py-3 text-sm md:px-10 md:py-5 md:text-lg"
+    : "px-5 py-2.5 text-xs md:px-8 md:py-4 md:text-base"
+}`}
     >
       {children}
       <svg
@@ -77,14 +76,13 @@ export default function App() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <div className="flex flex-col leading-none">
-            <span className="font-display text-xl md:text-2xl font-bold tracking-wide">
-              ASCENSÃO <span className="text-gradient-gold">PRO</span>
-            </span>
-            <span className="text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-white/50 mt-1">
-              Seu potencial máximo na carreira e negócios
-            </span>
-          </div>
+          <div className="flex items-center justify-center">
+  <img
+    src="/ascensao-logo.png"
+    alt="Ascensão Pro"
+    className="h-8 md:h-10 w-auto invert brightness-0"
+  />
+</div>
           <a
             href={CHECKOUT_URL}
             target="_blank"
@@ -124,30 +122,41 @@ export default function App() {
         </div>
       </section>
 
-      {/* VIDEO */}
-      <section id="aula" className="px-4 md:px-6 pb-16 md:pb-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="relative animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <div className="absolute -inset-4 bg-gradient-to-r from-gold/30 via-gold-light/20 to-gold/30 rounded-3xl blur-2xl opacity-60" />
-            <div className="relative gold-border rounded-2xl overflow-hidden shadow-glow bg-black">
-              <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-                <iframe
-                  src={VIDEO_URL}
-                  className="absolute inset-0 w-full h-full"
-                  style={{ border: "none" }}
-                  allow="autoplay; encrypted-media; fullscreen"
-                  allowFullScreen
-                  title="Aula Ascensão Pro"
-                />
-              </div>
-            </div>
-          </div>
+      <section id="aula" className="px-3 md:px-6 pb-12 md:pb-20">
+  <div className="max-w-5xl mx-auto">
 
-          <div className="mt-10 md:mt-12 text-center animate-fade-up" style={{ animationDelay: "0.45s" }}>
-            <CTAButton large>Quero destravar meu crescimento</CTAButton>
-          </div>
-        </div>
-      </section>
+    <div className="relative">
+
+      {/* EFEITO (mais leve no mobile) */}
+      <div className="hidden md:block absolute -inset-4 bg-gradient-to-r from-gold/30 via-gold-light/20 to-gold/30 rounded-3xl blur-2xl opacity-60" />
+
+      {/* CARD VIDEO */}
+      <div className="relative gold-border rounded-xl md:rounded-2xl overflow-hidden bg-black">
+
+  <div className="relative w-full aspect-video">
+    <iframe
+      src={VIDEO_URL}
+      className="absolute inset-0 w-full h-full rounded-xl"
+      style={{ border: "none" }}
+      allow="autoplay; encrypted-media; fullscreen"
+      allowFullScreen
+      title="Aula Ascensão Pro"
+    />
+  </div>
+
+      </div>
+    </div>
+
+    {/* CTA */}
+    <div className="mt-8 md:mt-12 text-center">
+      <CTAButton>
+        <span className="md:hidden">Quero crescer</span>
+        <span className="hidden md:inline">Quero destravar meu crescimento</span>
+      </CTAButton>
+    </div>
+
+  </div>
+</section>
 
       {/* STATS */}
       <section className="px-6 py-16 md:py-24">
@@ -181,45 +190,57 @@ export default function App() {
         </div>
       </section>
 
-      {/* SOLUTION */}
-      <section className="px-6 py-16 md:py-28 relative">
-        <div className="max-w-5xl mx-auto">
-          <div className="glass gold-border rounded-3xl p-8 md:p-16 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-            <div className="relative">
-              <span className="text-xs md:text-sm uppercase tracking-[0.25em] text-gold mb-5 block">
-                A Jornada do Potencial
-              </span>
-              <h2 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-8">
-                O acompanhamento para quem busca{" "}
-                <span className="text-gradient-gold italic">profundidade</span> e{" "}
-                <span className="text-gradient-gold italic">resultados.</span>
-              </h2>
-              <p className="text-lg md:text-xl text-white/75 leading-relaxed max-w-3xl">
-                A <strong className="text-white">Jornada do Potencial — Ascensão Pro</strong> foi
-                desenhada para psicólogas que já entenderam que não basta saber a
-                técnica clínica; é preciso ter um método para sustentar o próprio
-                crescimento. Através do diagnóstico{" "}
-                <strong className="text-gold">MAP ID</strong> e encontros
-                individuais, vamos desenhar o seu roadmap de atuação para os
-                próximos meses.
-              </p>
+      <section className="px-4 md:px-6 py-12 md:py-28 relative">
+  <div className="max-w-5xl mx-auto">
+    <div className="glass gold-border rounded-3xl p-6 md:p-16 relative overflow-hidden">
 
-              <div className="mt-10">
-                <CTAButton large>Quero destravar meu crescimento</CTAButton>
-              </div>
-            </div>
-          </div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+
+      <div className="relative">
+
+        <span className="text-[10px] md:text-sm uppercase tracking-[0.2em] md:tracking-[0.25em] text-gold mb-4 md:mb-5 block">
+          A Jornada do Potencial
+        </span>
+
+        <h2 className="font-display text-2xl md:text-5xl font-bold leading-[1.3] md:leading-tight mb-6 md:mb-8">
+          O acompanhamento para quem busca{" "}
+          <span className="text-gradient-gold italic">profundidade</span> e{" "}
+          <span className="text-gradient-gold italic">resultados.</span>
+        </h2>
+
+        <p className="text-sm md:text-xl text-white/75 leading-relaxed max-w-3xl">
+          A <strong className="text-white">Jornada do Potencial — Ascensão Pro</strong> foi
+          desenhada para psicólogas que já entenderam que não basta saber a
+          técnica clínica; é preciso ter um método para sustentar o próprio
+          crescimento. Através do diagnóstico{" "}
+          <strong className="text-gold">MAP ID</strong> e encontros
+          individuais, vamos desenhar o seu roadmap de atuação para os
+          próximos meses.
+        </p>
+
+        <div className="mt-6 md:mt-10">
+          <CTAButton>
+  <span className="md:hidden">Quero crescer</span>
+  <span className="hidden md:inline">Quero destravar meu crescimento</span>
+</CTAButton>
         </div>
-      </section>
+
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* FOOTER */}
       <footer className="px-6 py-12 border-t border-white/5 mt-10">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="font-display text-lg font-bold mb-2">
-            ASCENSÃO <span className="text-gradient-gold">PRO</span>
+          <div className="flex items-center justify-center">
+            <img
+              src="/ascensao-logo.png"
+              alt="Ascensão Pro"
+              className="h-8 md:h-10 w-auto invert brightness-0"
+            />
           </div>
-          <p className="text-xs text-white/40 uppercase tracking-[0.2em]">
+          <p className="text-xs text-white/40 uppercase tracking-[0.2em] mt-4">
             © {new Date().getFullYear()} — Todos os direitos reservados
           </p>
         </div>
