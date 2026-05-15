@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const CHECKOUT_URL = "https://chk.eduzz.com/801E4VKNW7";
 const VIDEO_URL = 
-  "https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/preview";
+  "https://www.kapwing.com/w/UaYjDAQloZ";
 
 function CTAButton({ children, large = false }: { children: React.ReactNode; large?: boolean }) {
   return (
