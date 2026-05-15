@@ -220,11 +220,9 @@ export default function App() {
               className="h-8 md:h-10 w-auto invert brightness-0"
             />
           </div>
-          <div>
-          <p className="text-xs text-white/40 uppercase tracking-[0.2em]">
+          <p className="text-xs text-white/40 uppercase tracking-[0.2em] mt-4">
             © {new Date().getFullYear()} — Todos os direitos reservados
           </p>
-          </div>
         </div>
       </footer>
     </div>
