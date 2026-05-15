@@ -75,14 +75,13 @@ export default function App() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <div className="flex flex-col leading-none">
-            <span className="font-display text-xl md:text-2xl font-bold tracking-wide">
-              ASCENSÃO <span className="text-gradient-gold">PRO</span>
-            </span>
-            <span className="text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-white/50 mt-1">
-              Seu potencial máximo na carreira e negócios
-            </span>
-          </div>
+          <div className="flex items-center justify-center">
+  <img
+    src="/ascensao-logo.png"
+    alt="Ascensão Pro"
+    className="h-8 md:h-10 w-auto"
+  />
+</div>
           <a
             href={CHECKOUT_URL}
             target="_blank"
