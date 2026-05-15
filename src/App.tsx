@@ -141,7 +141,7 @@ export default function App() {
           </div>
 
           <div className="mt-10 md:mt-12 text-center animate-fade-up" style={{ animationDelay: "0.45s" }}>
-            <CTAButton large>Quero destravar meu crescimento</CTAButton>
+            <CTAButton>Quero destravar meu crescimento</CTAButton>
           </div>
         </div>
       </section>
