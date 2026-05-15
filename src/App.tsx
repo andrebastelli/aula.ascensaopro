@@ -143,7 +143,10 @@ export default function App() {
           </div>
 
           <div className="mt-10 md:mt-12 text-center animate-fade-up" style={{ animationDelay: "0.45s" }}>
-            <CTAButton>Quero destravar meu crescimento</CTAButton>
+            <CTAButton>
+  <span className="md:hidden">Quero crescer</span>
+  <span className="hidden md:inline">Quero destravar meu crescimento</span>
+</CTAButton>
           </div>
         </div>
       </section>
@@ -209,7 +212,10 @@ export default function App() {
         </p>
 
         <div className="mt-6 md:mt-10">
-          <CTAButton>Quero destravar meu crescimento</CTAButton>
+          <CTAButton>
+  <span className="md:hidden">Quero crescer</span>
+  <span className="hidden md:inline">Quero destravar meu crescimento</span>
+</CTAButton>
         </div>
 
       </div>
