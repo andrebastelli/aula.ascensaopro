@@ -10,9 +10,11 @@ function CTAButton({ children, large = false }: { children: React.ReactNode; lar
       href={CHECKOUT_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className={`btn-premium inline-flex items-center justify-center gap-3 rounded-full font-semibold text-ink tracking-wide uppercase ${
-        large ? "px-10 py-5 text-base md:text-lg" : "px-8 py-4 text-sm md:text-base"
-      }`}
+      className={`btn-premium inline-flex items-center justify-center gap-2 rounded-full font-semibold text-ink tracking-wide uppercase whitespace-nowrap w-full max-w-[280px] mx-auto md:w-auto ${
+  large
+    ? "px-6 py-3 text-sm md:px-10 md:py-5 md:text-lg"
+    : "px-5 py-2.5 text-xs md:px-8 md:py-4 md:text-base"
+}`}
     >
       {children}
       <svg
