@@ -213,8 +213,12 @@ export default function App() {
       {/* FOOTER */}
       <footer className="px-6 py-12 border-t border-white/5 mt-10">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="font-display text-lg font-bold mb-2">
-            ASCENSÃO <span className="text-gradient-gold">PRO</span>
+          <div className="flex items-center justify-center">
+            <img
+              src="/ascensao-logo.png"
+              alt="Ascensão Pro"
+              className="h-8 md:h-10 w-auto invert brightness-0"
+            />
           </div>
           <p className="text-xs text-white/40 uppercase tracking-[0.2em]">
             © {new Date().getFullYear()} — Todos os direitos reservados
