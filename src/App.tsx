@@ -79,7 +79,7 @@ export default function App() {
   <img
     src="/ascensao-logo.png"
     alt="Ascensão Pro"
-    className="h-8 md:h-10 w-auto"
+    className="h-8 md:h-10 w-auto invert brightness-0"
   />
 </div>
           <a
