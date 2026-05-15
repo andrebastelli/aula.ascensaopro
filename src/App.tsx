@@ -178,37 +178,42 @@ export default function App() {
         </div>
       </section>
 
-      {/* SOLUTION */}
-      <section className="px-6 py-16 md:py-28 relative">
-        <div className="max-w-5xl mx-auto">
-          <div className="glass gold-border rounded-3xl p-8 md:p-16 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-            <div className="relative">
-              <span className="text-xs md:text-sm uppercase tracking-[0.25em] text-gold mb-5 block">
-                A Jornada do Potencial
-              </span>
-              <h2 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-8">
-                O acompanhamento para quem busca{" "}
-                <span className="text-gradient-gold italic">profundidade</span> e{" "}
-                <span className="text-gradient-gold italic">resultados.</span>
-              </h2>
-              <p className="text-lg md:text-xl text-white/75 leading-relaxed max-w-3xl">
-                A <strong className="text-white">Jornada do Potencial — Ascensão Pro</strong> foi
-                desenhada para psicólogas que já entenderam que não basta saber a
-                técnica clínica; é preciso ter um método para sustentar o próprio
-                crescimento. Através do diagnóstico{" "}
-                <strong className="text-gold">MAP ID</strong> e encontros
-                individuais, vamos desenhar o seu roadmap de atuação para os
-                próximos meses.
-              </p>
+      <section className="px-4 md:px-6 py-12 md:py-28 relative">
+  <div className="max-w-5xl mx-auto">
+    <div className="glass gold-border rounded-3xl p-6 md:p-16 relative overflow-hidden">
 
-              <div className="mt-10">
-                <CTAButton large>Quero destravar meu crescimento</CTAButton>
-              </div>
-            </div>
-          </div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+
+      <div className="relative">
+
+        <span className="text-[10px] md:text-sm uppercase tracking-[0.2em] md:tracking-[0.25em] text-gold mb-4 md:mb-5 block">
+          A Jornada do Potencial
+        </span>
+
+        <h2 className="font-display text-2xl md:text-5xl font-bold leading-[1.3] md:leading-tight mb-6 md:mb-8">
+          O acompanhamento para quem busca{" "}
+          <span className="text-gradient-gold italic">profundidade</span> e{" "}
+          <span className="text-gradient-gold italic">resultados.</span>
+        </h2>
+
+        <p className="text-sm md:text-xl text-white/75 leading-relaxed max-w-3xl">
+          A <strong className="text-white">Jornada do Potencial — Ascensão Pro</strong> foi
+          desenhada para psicólogas que já entenderam que não basta saber a
+          técnica clínica; é preciso ter um método para sustentar o próprio
+          crescimento. Através do diagnóstico{" "}
+          <strong className="text-gold">MAP ID</strong> e encontros
+          individuais, vamos desenhar o seu roadmap de atuação para os
+          próximos meses.
+        </p>
+
+        <div className="mt-6 md:mt-10">
+          <CTAButton>Quero destravar meu crescimento</CTAButton>
         </div>
-      </section>
+
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* FOOTER */}
       <footer className="px-6 py-12 border-t border-white/5 mt-10">
