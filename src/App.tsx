@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
 const CHECKOUT_URL = "https://chk.eduzz.com/801E4VKNW7";
-const VIDEO_URL = 
-  "https://www.youtube.com/embed/TuRcOmk8ZRs";
+const VIDEO_URL = "https://www.youtube.com/embed/TuRcOmk8ZRs?controls=1&modestbranding=1&rel=0&showinfo=0";
 
 function CTAButton({ children, large = false }: { children: React.ReactNode; large?: boolean }) {
   return (
