@@ -134,10 +134,10 @@ export default function App() {
       {/* CARD VIDEO */}
       <div className="relative gold-border rounded-xl md:rounded-2xl overflow-hidden shadow-md md:shadow-glow bg-black">
 
-        <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+        <div className="relative w-full aspect-video">
           <iframe
             src={VIDEO_URL}
-            className="absolute inset-0 w-full h-full"
+            className="absolute inset-0 w-full h-full rounded-xl"
             style={{ border: "none" }}
             allow="autoplay; encrypted-media; fullscreen"
             allowFullScreen
