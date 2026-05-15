@@ -132,18 +132,18 @@ export default function App() {
       <div className="hidden md:block absolute -inset-4 bg-gradient-to-r from-gold/30 via-gold-light/20 to-gold/30 rounded-3xl blur-2xl opacity-60" />
 
       {/* CARD VIDEO */}
-      <div className="relative gold-border rounded-xl md:rounded-2xl overflow-hidden shadow-md md:shadow-glow bg-black">
+      <div className="relative gold-border rounded-xl md:rounded-2xl overflow-hidden bg-black">
 
-        <div className="relative w-full aspect-video">
-          <iframe
-            src={VIDEO_URL}
-            className="absolute inset-0 w-full h-full rounded-xl"
-            style={{ border: "none" }}
-            allow="autoplay; encrypted-media; fullscreen"
-            allowFullScreen
-            title="Aula Ascensão Pro"
-          />
-        </div>
+  <div className="relative w-full aspect-video">
+    <iframe
+      src={VIDEO_URL}
+      className="absolute inset-0 w-full h-full rounded-xl"
+      style={{ border: "none" }}
+      allow="autoplay; encrypted-media; fullscreen"
+      allowFullScreen
+      title="Aula Ascensão Pro"
+    />
+  </div>
 
       </div>
     </div>
